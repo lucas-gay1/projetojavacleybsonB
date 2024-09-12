@@ -4,6 +4,7 @@
  */
 package view;
 
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -34,9 +35,9 @@ public class JFLogin extends javax.swing.JFrame {
         panel1 = new java.awt.Panel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        jTextFieldUsoario = new javax.swing.JTextField();
+        jPasswordFieldSenha = new javax.swing.JPasswordField();
+        jButtonSenha = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
 
         jTextArea1.setColumns(20);
@@ -57,22 +58,27 @@ public class JFLogin extends javax.swing.JFrame {
         jLabel2.setText("senha");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 40, 20));
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldUsoario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jTextFieldUsoarioActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 40, 160, 40));
+        getContentPane().add(jTextFieldUsoario, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 40, 160, 40));
 
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        jPasswordFieldSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                jPasswordFieldSenhaActionPerformed(evt);
             }
         });
-        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 160, 40));
+        getContentPane().add(jPasswordFieldSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 160, 40));
 
-        jButton1.setText("entrar");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, -1, -1));
+        jButtonSenha.setText("login");
+        jButtonSenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSenhaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, -1, 20));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/manga.jpg"))); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 210, 200));
@@ -81,13 +87,28 @@ public class JFLogin extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jTextFieldUsoarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldUsoarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jTextFieldUsoarioActionPerformed
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void jPasswordFieldSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordFieldSenhaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_jPasswordFieldSenhaActionPerformed
+
+    private void jButtonSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSenhaActionPerformed
+String usoario = jTextFieldUsoario.getText();
+        // TODO add your handling code here:
+        String Senha = jPasswordFieldSenha.getText();
+       
+        
+        if ( usoario.equals( "cleybson" ) &&
+            Senha.equals ("1234")){
+       Main main = new Main();
+       main.setExtendedState(JFrame.MAXIMIZED_BOTH);
+    }else{
+            JOptionPane.showMessageDialog(null, "Login ou senha invaluda");            
+        }
+    }//GEN-LAST:event_jButtonSenhaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -126,15 +147,15 @@ public class JFLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonSenha;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JPasswordField jPasswordFieldSenha;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextFieldUsoario;
     private java.awt.Panel panel1;
     // End of variables declaration//GEN-END:variables
 }
