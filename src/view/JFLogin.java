@@ -58,6 +58,7 @@ public class JFLogin extends javax.swing.JFrame {
         jLabel2.setText("senha");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 40, 20));
 
+        jTextFieldUsoario.setText("cleybson");
         jTextFieldUsoario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldUsoarioActionPerformed(evt);
@@ -65,6 +66,7 @@ public class JFLogin extends javax.swing.JFrame {
         });
         getContentPane().add(jTextFieldUsoario, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 40, 160, 40));
 
+        jPasswordFieldSenha.setText("1234");
         jPasswordFieldSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordFieldSenhaActionPerformed(evt);
@@ -105,6 +107,7 @@ String usoario = jTextFieldUsoario.getText();
             Senha.equals ("1234")){
        Main main = new Main();
        main.setExtendedState(JFrame.MAXIMIZED_BOTH);
+       main.setVisible(true);
     }else{
             JOptionPane.showMessageDialog(null, "Login ou senha invaluda");            
         }
