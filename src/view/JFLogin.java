@@ -33,6 +33,8 @@ public class JFLogin extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
         panel1 = new java.awt.Panel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jEditorPane1 = new javax.swing.JEditorPane();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jTextFieldUsoario = new javax.swing.JTextField();
@@ -47,6 +49,8 @@ public class JFLogin extends javax.swing.JFrame {
         jLabel4.setText("jLabel4");
 
         panel1.setBackground(new java.awt.Color(204, 255, 255));
+
+        jScrollPane1.setViewportView(jEditorPane1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("autentificação");
@@ -151,11 +155,13 @@ String usoario = jTextFieldUsoario.getText();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonSenha;
+    private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPasswordField jPasswordFieldSenha;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextFieldUsoario;
